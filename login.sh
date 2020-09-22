@@ -6,7 +6,8 @@ login () {
 	do
 		ssh zixwang@tlab0$n.clamv.jacobs-university.de
 		# ssh returns 0 when login successed
-		if [ $? -eq 0 ]
+		returnv=$?
+		if [ $returnv -eq 0 ]
 		then
 			echo "Press enter to continue."
 			read foo
